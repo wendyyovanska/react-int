@@ -6,8 +6,8 @@ function CreateTodoButton() {
     <button className="createTodoButton"
     onClick={
       (event) => {
-        console.log('ere')
         console.log(event)
+        console.log(event.target)
       }
     }
     >+</button>
