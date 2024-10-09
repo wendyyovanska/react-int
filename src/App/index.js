@@ -13,14 +13,11 @@ import { useLocalStorage } from "./useLocalStorage";
 
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
 
-
-// function App(defaultTodos) {
-
 function App() {
   const {
-    item: todos, 
-    saveItem: saveTodos, 
-    loading, 
+    item: todos,
+    saveItem: saveTodos,
+    loading,
     error
   } = useLocalStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
@@ -47,8 +44,8 @@ function App() {
     saveTodos(newTodos);
   };
 
-  return(
-    <AppUI 
+  return (
+    <AppUI
       loading={loading}
       error={error}
       completedTodos={completedTodos}
