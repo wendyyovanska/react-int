@@ -27,7 +27,7 @@ function useLocalStorage(itemName, initialValue) { //custom hook
         setLoading(false);
       }
     }, 2000);
-  });
+  }, []);
 
   const saveItem = (newItem) => {
     localStorage.setItem(itemName, JSON.stringify(newItem));
@@ -43,3 +43,14 @@ function useLocalStorage(itemName, initialValue) { //custom hook
 }
 
 export { useLocalStorage }
+
+// localStorage.removeItem('TODOS_V1');
+
+// const defaultTodos = [
+//   { text: 'tarea uno', completed: true },
+//   { text: 'tarea dos', completed: false },
+//   { text: 'tarea tres', completed: false },
+//   { text: 'tarea CUATRO', completed: false },
+// ];
+
+// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
